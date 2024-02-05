@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Anton&display=swap" rel="stylesheet">
+
+
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <title>Seleccionar Imagen</title>
+</head>
+<body>
+    <section>
+
+        <h3 class="line"> </h3>
+        <H2>Major Scales</H2>
+           <P>Select the key</P>
+
+
+
+
+<label for="opciones"></label>
+<select id="opciones"  onchange="mostrarImagen()">
+    <option value="CM">C Major</option>
+    <option value="CsM">C# Major</option>
+    <option value="DM">D Major</option>
+    <option value="EbM">Eb Major</option>
+    <option value="EM">E Major</option>
+    <option value="FM">F Major</option>
+    <option value="FsM">F# Major</option>
+    <option value="GM">G Major</option>
+    <option value="AbM">Ab Major</option>
+    <option value="AM">A Major</option>
+    <option value="BbM">Bb Major</option>
+    <option value="BM">B Major</option>
+</select>
+
+<div id="imagenContainer" >
+    <img id="imagenMostrada" src="" alt="IMAGEN DE LA ESCALA" class="foto">
+</div>
+
+<button > <a href="index.html" title="Mayores">Go Home</a></button>
+
+<h3 class="line"> </h3>
+</section>
+
+<script>
+    function mostrarImagen() {
+        var seleccion = document.getElementById("opciones").value;
+        var imagenContainer = document.getElementById("imagenContainer");
+        var imagenMostrada = document.getElementById("imagenMostrada");
+
+        // Definir el origen de la imagen según la opción seleccionada
+        switch (seleccion) {
+            case "CM":
+                imagenMostrada.src = "images/CM.jpg";
+                break;
+            
+            case "CsM":
+                imagenMostrada.src = "images/CsM.jpg";
+                break;    
+
+            case "DM":
+                imagenMostrada.src = "images/DM.jpg";
+                break;
+
+            case "EbM":
+                imagenMostrada.src = "images/EbM.jpg";
+                break;
+
+            case "EM":
+                imagenMostrada.src = "images/EM.jpg";
+                break;
+            case "FM":
+                imagenMostrada.src = "images/FM.jpg";
+                break;
+            
+            case "FsM":
+                imagenMostrada.src = "images/FsM.jpg";
+                break;
+
+                case "GM":
+                imagenMostrada.src = "images/GM.jpg";
+                break;
+
+                case "AbM":
+                imagenMostrada.src = "images/AbM.jpg";
+                break;
+
+                case "AM":
+                imagenMostrada.src = "images/AM.jpg";
+                break;
+
+                case "BbM":
+                imagenMostrada.src = "images/BbM.jpg";
+                break;
+
+                case "BM":
+                imagenMostrada.src = "images/BM.jpg";
+                break;
+
+
+
+
+
+
+            default:
+                // En caso de que la opción no coincida con ninguna de las anteriores
+                imagenMostrada.src = "";
+        }
+
+        // Mostrar o ocultar el contenedor de la imagen según la opción seleccionada
+        if (seleccion === "CM" || seleccion === "CsM" || seleccion === "DM" || seleccion === "EbM" ||seleccion === "EM" || seleccion === "FM" || seleccion === "FsM" || seleccion === "GM" || seleccion === "AbM" || seleccion === "AM" || seleccion === "BbM" || seleccion === "BM") {
+            imagenContainer.style.display = "block";
+        } else {
+            imagenContainer.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
