@@ -22,28 +22,28 @@
            <P>Select the Key</P>
 
 
-<!--
+
 
 <label for="opciones"></label>
 <select id="opciones"  onchange="mostrarImagen()">
-    <option value="CM">C minor</option>
-    <option value="C#M">C# minor</option>
-    <option value="DM">D minor</option>
-    <option value="EbM">Eb minor</option>
-    <option value="EM">E minor</option>
-    <option value="FM">F minor</option>
-    <option value="F#M">F# minor</option>
-    <option value="GM">G minor</option>
-    <option value="AbM">Ab minor</option>
-    <option value="AM">A minor</option>
-    <option value="BbM">Bb minor</option>
-    <option value="BM">B minor</option>
+    <option value="C">C minor</option>
+    <option value="C#">C# minor</option>
+    <option value="D">D minor</option>
+    <option value="D#">D# minor</option>
+    <option value="E">E minor</option>
+    <option value="F">F minor</option>
+    <option value="F#">F# minor</option>
+    <option value="G">G minor</option>
+    <option value="G#">G# minor</option>
+    <option value="A">A minor</option>
+    <option value="Bb">Bb minor</option>
+    <option value="B">B minor</option>
 </select>
 
 <div id="imagenContainer" >
     <img id="imagenMostrada" src="" alt="IMAGEN DE LA ESCALA" class="foto">
 </div>
--->
+
 
 
 <button > <a href="index.html" title="Mayores">Go Home</a></button>
@@ -60,25 +60,51 @@
 
         // Definir el origen de la imagen según la opción seleccionada
         switch (seleccion) {
-            case "CM":
-                imagenMostrada.src = "CM.jpg";
+            case "C":
+                imagenMostrada.src = "images/Cm.jpg";
                 break;
-            case "DM":
-                imagenMostrada.src = "DM.jpg";
+            case "C#":
+                imagenMostrada.src = "images/Csme.jpg";
                 break;
-            case "EM":
-                imagenMostrada.src = "EM.jpg";
+            case "D":
+                imagenMostrada.src = "images/Dme.jpg";
                 break;
-            case "FM":
-                imagenMostrada.src = "FM.jpg";
+            case "D#":
+                imagenMostrada.src = "images/Dsme.jpg";
                 break;
+            case "E":
+                imagenMostrada.src = "images/Eme.jpg";
+                break;
+            case "F":
+                imagenMostrada.src = "images/Fme.jpg";
+                break;
+            case "F#":
+                imagenMostrada.src = "images/Fsme.jpg";
+                break;
+            case "G":
+                imagenMostrada.src = "images/Gme.jpg";
+                break;
+            case "G#":
+                imagenMostrada.src = "images/Gsme.jpg";
+                break;
+            case "A":
+                imagenMostrada.src = "images/Ame.jpg";
+                break;
+            case "Bb":
+                imagenMostrada.src = "images/Bbme.jpg";
+                break;
+            case "B":
+                imagenMostrada.src = "images/Bme.jpg";
+                break;    
+                
+
             default:
                 // En caso de que la opción no coincida con ninguna de las anteriores
                 imagenMostrada.src = "";
         }
 
         // Mostrar o ocultar el contenedor de la imagen según la opción seleccionada
-        if (seleccion === "CM" || seleccion === "DM" || seleccion === "EM" || seleccion === "FM") {
+        if (seleccion === "C" || seleccion === "C#" || seleccion === "D" || seleccion === "D#" || seleccion === "E" || seleccion === "F" || seleccion === "F#" || seleccion === "G" || seleccion === "G#" || seleccion === "A" || seleccion === "Bb" || seleccion === "B" ) {
             imagenContainer.style.display = "block";
         } else {
             imagenContainer.style.display = "none";
