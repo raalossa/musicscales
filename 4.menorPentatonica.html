@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Anton&display=swap" rel="stylesheet">
+
+
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <title>Seleccionar Imagen</title>
+</head>
+<body>
+    <section>
+        <H2>Minor Pentatonic scales in construction!</H2>
+           <P>Select the Key</P>
+
+
+<!--
+
+<label for="opciones"></label>
+<select id="opciones"  onchange="mostrarImagen()">
+    <option value="CM">C minor Pentatonic</option>
+    <option value="C#M">C# minor</option>
+    <option value="DM">D minor</option>
+    <option value="EbM">Eb minor</option>
+    <option value="EM">E minor</option>
+    <option value="FM">F minor</option>
+    <option value="F#M">F# minor</option>
+    <option value="GM">G minor</option>
+    <option value="AbM">Ab minor</option>
+    <option value="AM">A minor</option>
+    <option value="BbM">Bb minor</option>
+    <option value="BM">B minor</option>
+</select>
+
+<div id="imagenContainer" >
+    <img id="imagenMostrada" src="" alt="IMAGEN DE LA ESCALA" class="foto">
+</div>
+-->
+
+<button > <a href="index.html" title="Mayores">Ir a Escalas</a></button>
+<h3> </h3>
+<h4> </h4>
+</section>
+
+<script>
+    function mostrarImagen() {
+        var seleccion = document.getElementById("opciones").value;
+        var imagenContainer = document.getElementById("imagenContainer");
+        var imagenMostrada = document.getElementById("imagenMostrada");
+
+        // Definir el origen de la imagen según la opción seleccionada
+        switch (seleccion) {
+            case "CM":
+                imagenMostrada.src = "CM.jpg";
+                break;
+            case "DM":
+                imagenMostrada.src = "DM.jpg";
+                break;
+            case "EM":
+                imagenMostrada.src = "EM.jpg";
+                break;
+            case "FM":
+                imagenMostrada.src = "FM.jpg";
+                break;
+            default:
+                // En caso de que la opción no coincida con ninguna de las anteriores
+                imagenMostrada.src = "";
+        }
+
+        // Mostrar o ocultar el contenedor de la imagen según la opción seleccionada
+        if (seleccion === "CM" || seleccion === "DM" || seleccion === "EM" || seleccion === "FM") {
+            imagenContainer.style.display = "block";
+        } else {
+            imagenContainer.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
